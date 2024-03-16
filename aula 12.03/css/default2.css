@@ -1,0 +1,49 @@
+body {
+    margin: 0px;
+}
+
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+    background-color: aqua;
+    padding: 10px;
+    font-size: 1.25em;
+    font-weight: bold;
+    position: sticky;
+    top: 0px;
+}
+
+nav {
+    background-color: aquamarine;
+    padding: 5px;
+}
+
+footer {
+    background-color: blue;
+    color: white;
+    text-align: center;
+    padding: 8px;
+    font-size: 0.75em;
+    font-style: italic;
+    position: fixed;
+    width: 100vw;
+    bottom: 0px;
+}
+
+.borda {
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th, td {
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+}
