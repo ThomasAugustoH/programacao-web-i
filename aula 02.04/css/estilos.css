@@ -1,0 +1,11 @@
+.sucesso {
+    background-color: lightgreen !important;
+}
+
+.erro {
+    background-color: lightcoral !important;
+}
+
+.cuidado {
+    background-color: yellow !important;
+}
