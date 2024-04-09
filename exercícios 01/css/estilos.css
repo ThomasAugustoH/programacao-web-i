@@ -1,0 +1,47 @@
+body {
+    background-color: aquamarine;
+    align-items: center;
+    align-content: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.alinhar {
+    text-align: center;
+}
+
+.vermelho {
+    background-color: lightcoral;
+}
+
+.verde {
+    background-color: lightgreen;
+}
+
+.amarelo {
+    background-color: yellow;
+}
+
+table {
+    border-collapse: collapse;
+    position: relative;
+}
+
+td, tr {
+    background-color: aquamarine;
+    border: solid;
+}
+td {
+    padding: 25px;
+}
+
+.passarMouse {
+    padding: 10px;
+}
+
+.passarMouse:hover {
+    background-color: blueviolet;
+}
