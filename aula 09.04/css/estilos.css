@@ -1,0 +1,33 @@
+.sucesso {
+    background-color: lightgreen !important;
+}
+
+.erro {
+    background-color: lightcoral !important;
+}
+
+.cuidado {
+    background-color: yellow !important;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+tr, td {
+    border: 1px solid black;
+    padding: 1em;
+}
+
+li:first-child {
+    font-weight: bold;
+}
+
+li:last-child {
+    font-weight: bold;
+    color: red;
+}
+
+tr:nth-child(3n) {
+    background-color: lightgray;
+}

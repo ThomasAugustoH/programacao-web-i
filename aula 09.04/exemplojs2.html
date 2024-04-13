@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/lib2.js"></script>
+    <title>JS avançado</title>
+</head>
+
+<body>
+    <script>
+        var vetor1 = ['Blumenau', 'Gaspar', 'Indaial'];
+        // var cidade1 = vetor1[0];
+        // var cidade2 = vetor1[1];
+        // var cidade3 = vetor1[2];
+        var [cidade1, cidade2, cidade3] = vetor1
+
+        var [vResult1, vResult2, vResult3, vResult4] = calcula(5, 4);
+
+        const auto1 = {
+            marca: "Toyota",
+            modelo: "Corolla",
+            cor: "branca",
+            ano: 2020,
+            endereco: {
+                rua: "Amazonas",
+                cidade: "Blumenau"
+            }
+        };
+
+        function infoAuto({ marca, modelo, cor, ano }) {
+            return "Marca: " + marca + " Modelo: " + modelo + " Cor: " + cor + " Ano: " + ano;
+        }
+
+        function infoAuto2({ modelo, endereco: { cidade } }) {
+            return "Modelo: " + modelo + " Cidade: " + cidade;
+        }
+
+        const vet1 = [1,2,3];
+        const vet2 = [4,5,6];
+        const vet3 = [...vet1, ...vet2];
+
+        var [var1, var2, ...vet4] = vet3;
+
+        var objeto1 = {
+            nome: 'Eduardo',
+            categoria: 'DJ',
+            centro: 'USF',
+            departamento: 'TRNO'
+        }
+
+        var objeto2 = {
+            nome: 'Eduardo',
+            categoria: 'HLCPT',
+            centro: 'BTP'
+        }
+
+        const objeto3 = {...objeto1, ...objeto2};
+
+        const variavel = {...vet3, ...objeto1};
+
+        function funcao1() {
+            return "Olá, mundo!";
+        }
+
+        var vFuncao = funcao1;
+
+        var vFuncao2 = function() {
+            return "Olá, mundo!";
+        }
+
+        var vFuncao3 = () => 'Olá, mundo!';
+
+        // function mostraData() {
+        //     var vData = new Date();
+        //     document.getElementById('mensagem').innerHTML = vData;
+        // }
+
+        // setInterval(mostraData,1000);
+
+        setInterval(() => document.getElementById('mensagem').innerHTML = new Date(), 1000);
+    </script>
+    <div id="mensagem"></div>
+</body>
+
+</html>
