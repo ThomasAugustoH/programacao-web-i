@@ -1,0 +1,56 @@
+body {
+  margin: 8px;
+}
+
+menu {
+  padding: 5px;
+  background-color: aqua;
+  font-size: 1.5em;
+  font-family: Verdana;
+}
+menu a {
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+menu > li {
+  display: inline-block;
+}
+
+header, footer {
+  background-color: yellow;
+}
+
+footer {
+  background-color: yellow;
+}
+
+.mensagem {
+  color: red;
+  font-weight: bolder;
+  font-size: 1.5em;
+  border: 1px solid blue;
+  font-family: "Courier New", Courier, monospace;
+}
+
+button {
+  color: red;
+  font-weight: bolder;
+  font-size: 1.5em;
+  border: 1px solid blue;
+}
+
+.button-default, .button-cancela, .button-ok {
+  border: none;
+  padding: 5px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.button-ok {
+  background-color: lightgreen;
+}
+
+.button-cancela {
+  background-color: lightcoral;
+}/*# sourceMappingURL=exemplo.css.map */

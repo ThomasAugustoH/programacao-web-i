@@ -1,0 +1,40 @@
+const anExampleVariable = "Hello World"
+console.log(anExampleVariable);
+
+var x: number = 5;
+//x = 'Eduardo';
+let nome: string = 'Eduardo'
+let vFLag: boolean = true
+type tCidade = 'Blumenau' | 'Gaspar' | 'Itajaí';
+var vCidade: tCidade = 'Blumenau'
+type tGenerico = 'Eduardo' | 5 | true;
+var vGenerico: tGenerico = true
+vGenerico = 'Eduardo'
+
+class Pessoa {
+    id: number;
+    nome: string;
+    constructor(pid: number, pnome: string){
+        this.id = pid;
+        this.nome = pnome;
+    }
+}
+
+const cPessoa: Pessoa = new Pessoa(1, 'Eduardo');
+
+function olaMundo() {
+    console.log('Olá, mundo!');
+}
+
+olaMundo();
+
+function obter(pnumero: number){
+    return pnumero;
+}
+
+var vResultado: number = obter(1);
+
+function verFila(praLer: string | number){
+    var variavel: string = '';
+    
+}

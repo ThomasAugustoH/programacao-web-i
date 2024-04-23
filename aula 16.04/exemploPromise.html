@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo Promise</title>
+    <style>
+        .exemploFlex {
+            background-color: cadetblue;
+            display: flex;
+            flex-wrap: wrap;
+            /* flex-direction: row; */
+            justify-content: center;
+        }
+        .exemploFlex div {
+            background-color: lightgray;
+            padding: 5px;
+            margin: 3px;
+            text-align: center;
+        }
+        .exemploGrid {
+            background-color: cornflowerblue;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap: 3px;
+            /* justify-content: space-between; */
+        }
+        .exemploGrid div {
+            background-color: lightgray;
+            padding: 5px;
+            /* margin: 3px; */
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="exemploFlex">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+    </div>
+    <div class="exemploGrid">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+    </div>
+    
+    <script>
+        function lancaDado() {
+            for (let i = 0; i <= 1; i++) {
+                for (let j = 0; j < 1; j++) {
+                }
+            }
+            return Math.floor(Math.random() * 6) + 1;
+        }
+
+        var vPromise1 = new Promise(
+            (pCumpriu, pQuebrou) => {
+                let vDado = lancaDado();
+                if (vDado == 6) {
+                    // Cumpriu a "promessa"
+                    pCumpriu(vDado);
+                } else {
+                    // Quebrou a "promessa"
+                    pQuebrou(vDado);
+                }
+            }
+        )
+
+        async function chamaPromise() {
+            var vRetorno = '';
+
+            await vPromise1
+                .then(
+                    (pNumero) => vRetorno = 'Deu certo! ' + pNumero
+                )
+                .catch(
+                    (pNumero) => vRetorno = 'Deu errado! ' + pNumero
+                )
+            /* .finally(
+                () => console.log('Terminou!')
+            )*/
+            return vRetorno;
+        }
+
+        console.log('Antes de invocar Promise');
+        chamaPromise()
+            .then(
+                (pMensagem) => (console.log(pMensagem)
+                )
+            );
+        console.log('Depois de invocar Promise');
+    </script>
+</body>
+
+</html>

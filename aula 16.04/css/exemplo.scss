@@ -1,0 +1,63 @@
+@import "variables";
+
+body {
+    margin: 8px
+}
+
+menu {
+    padding: 5px;
+    background-color: aqua;
+    a {
+        font-weight: bold;
+        color: white;
+        text-decoration: none;
+    }
+    > li {
+        display: inline-block;
+    }
+    font: {
+        size: $FontSize;
+        family: $FontFamily;
+    }
+}
+
+header, footer {
+    background-color: $BGColor;
+}
+
+footer {
+    background-color: $BGColor;
+}
+
+@mixin importante {
+    color: red;
+    font-weight: bolder;
+    font-size: 1.5em;
+    border: 1px solid blue;
+}
+
+.mensagem {
+    @include importante();
+    font-family: 'Courier New', Courier, monospace;
+}
+
+button {
+    @include importante();
+}
+
+.button-default {
+    border: none;
+    padding: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.button-ok {
+    @extend.button-default;
+    background-color: lightgreen;
+}
+
+.button-cancela {
+    @extend.button-default;
+    background-color: lightcoral;
+}
