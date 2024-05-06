@@ -80,7 +80,9 @@ export class BoardComponent {
 
     linha.classList.remove('ativa');
     if (qtCorretas == 5) {
-      alert('Você venceu!! 🎉');
+      setTimeout(() => {
+        alert('Você venceu!! 🎉');
+    }, 1);
     } else {
       this.proximaLinha(linha);
     }
