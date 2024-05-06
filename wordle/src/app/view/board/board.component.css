@@ -1,0 +1,68 @@
+.posCorreta {
+  background-color: #00F03A !important;
+}
+
+.posIncorreta {
+  background-color: #F08700 !important;
+}
+
+.incorreta {
+  background-color: #2E2B33 !important;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.quadro {
+  max-width: 350px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.linha {
+  display: flex;
+}
+
+.celula {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  border: 1px solid #000;
+  margin: 3px;
+  font-size: 2em;
+  text-align: center;
+  color: white;
+  background-color: #5F349B;
+  font-weight: bold;
+}
+
+.ativa .celula {
+    background-color: #6400F0;
+}
+
+.ativa .celula:hover {
+  cursor: pointer;
+}
+
+.celula:focus {
+  caret-color: transparent;
+}
+
+button {
+  background-color: #5F349B;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  padding: 10px 20px;
+  font-size: 2em;
+  margin-bottom: 50px;
+}
+
+button:hover {
+  background-color: #6400F0;
+  cursor: pointer;
+}
