@@ -1,0 +1,12 @@
+.destaque {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.positivo {
+  background-color: lightgreen;
+}
+
+.negativo {
+  background-color: lightcoral;
+}
