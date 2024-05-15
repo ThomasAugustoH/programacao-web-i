@@ -1,11 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { Foto } from '../../model/foto';
+import { FotoService } from '../../controller/foto.service';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-app-cadastro2',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './app-cadastro2.component.html',
   styleUrl: './app-cadastro2.component.css'
 })
@@ -691,4 +693,34 @@ export class AppCadastro2Component {
       "thumbnailUrl": "https://via.placeholder.com/150/e2223e"
     }
   ]
+
+  vFoto: Foto = {
+    albumId: 0,
+    id: 0,
+    title: "",
+    url: "",
+    thumbnailUrl: ""
+  }
+
+  vFotoId: number = 0;
+
+  constructor(private vFotoService: FotoService) {}
+
+  carregaFotos() {
+    this.vFotoService.findAll().subscribe(
+      (pvetFotos) => {
+        this.vetFotos = pvetFotos;
+      }
+    )
+  }
+
+  buscaFoto(pFotoId: number): void {
+    this.vFotoService.findById(pFotoId).subscribe(
+      (pFoto) => {
+        this.vFoto = pFoto;
+        this.vetFotos = [];
+        this.vetFotos.push(this.vFoto);
+      }
+    )
+  }
 }
