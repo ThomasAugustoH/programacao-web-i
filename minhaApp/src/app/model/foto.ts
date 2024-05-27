@@ -1,5 +1,5 @@
 export interface Foto {
-  id: number;
+  id?: number;
   albumId: number;
   title: string;
   url: string;

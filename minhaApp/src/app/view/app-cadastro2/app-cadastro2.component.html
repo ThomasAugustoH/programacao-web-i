@@ -10,6 +10,17 @@
       <td>{{ foto.id }}</td>
       <td>{{ foto.title }}</td>
       <td><img src="{{ foto.thumbnailUrl }}" alt=""></td>
+      <td><button (click)="excluiFoto(foto.id!)">Excluir foto</button></td>
   </tr>
 </table>
+
+<section>
+  <input type="number" [(ngModel)]="vFoto.id" disabled>
+  <input type="number" [(ngModel)]="vFoto.albumId">
+  <input type="text" [(ngModel)]="vFoto.title">
+  <input type="text" [(ngModel)]="vFoto.url">
+  <input type="text" [(ngModel)]="vFoto.thumbnailUrl">
+  <button (click)="insereFoto()">Insere foto</button>
+  <button (click)="alteraFoto()">Altera foto</button>
+</section>
 <p>&nbsp;</p>

@@ -1,0 +1,21 @@
+<section>
+  <input type="number" [(ngModel)]="vAlbumId">
+  <button (click)="buscaAlbum(vAlbumId)">Consulta álbum</button>
+</section>
+<section>
+  <table>
+      <td>{{ vAlbum.id }}</td>
+      <td>{{ vAlbum.title }}</td>
+      <td>{{ vAlbum.userId }}</td>
+      <td><button (click)="buscaFotos(vAlbum.id!)">Busca fotos</button></td>
+  </table>
+</section>
+<section>
+  <table>
+      <tr *ngFor="let foto of vetFotos">
+          <td>{{ foto.id }}</td>
+          <td>{{ foto.title }}</td>
+          <td><img src="{{ foto.thumbnailUrl }}" alt=""></td>
+      </tr>
+  </table>
+</section>

@@ -17,4 +17,20 @@ export class FotoService {
   findById(pFotoId: number):Observable<Foto> {
     return this.vHttp.get<Foto>("https://jsonplaceholder.typicode.com/photos/" + pFotoId);
   }
+
+  findByAlbum(pAlbumId: number): Observable<Foto[]> {
+    return this.vHttp.get<Foto[]>('https://jsonplaceholder.typicode.com/albums/'+pAlbumId+'/photos');
+  }
+
+  insFoto(pFoto: Foto):Observable<Foto> {
+    return this.vHttp.post<Foto>("https://jsonplaceholder.typicode.com/photos", pFoto);
+  }
+
+  updFoto(pFoto: Foto):Observable<Foto> {
+    return this.vHttp.put<Foto>("https://jsonplaceholder.typicode.com/photos/" + pFoto.id, pFoto);
+  }
+
+  delFoto(pFotoId: number):Observable<void> {
+    return this.vHttp.delete<void>("https://jsonplaceholder.typicode.com/photos/" + pFotoId);
+  }
 }

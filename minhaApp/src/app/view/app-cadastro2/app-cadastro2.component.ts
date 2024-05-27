@@ -715,12 +715,41 @@ export class AppCadastro2Component {
   }
 
   buscaFoto(pFotoId: number): void {
-    this.vFotoService.findById(pFotoId).subscribe(
-      (pFoto) => {
+    this.vFotoService.findById(pFotoId).subscribe({
+      next: (pFoto) => {
+        this.vFoto = pFoto;
+        this.vetFotos = [];
+        this.vetFotos.push(this.vFoto)
+      },
+      error: () => alert('Foto ' + pFotoId + ' não encontrada')})
+      /*(pFoto) => {
         this.vFoto = pFoto;
         this.vetFotos = [];
         this.vetFotos.push(this.vFoto);
       }
+    )*/
+  }
+
+  insereFoto(): void {
+    this.vFotoService.insFoto(this.vFoto).subscribe(
+      (pFoto) => {
+        this.vFoto = pFoto;
+      }
     )
+  }
+
+  alteraFoto(): void {
+    this.vFotoService.updFoto(this.vFoto).subscribe({
+      next: (pFoto) => {
+        this.vFoto = pFoto
+        alert('Foto alterada com sucesso!')
+      }
+  })
+  }
+
+  excluiFoto(pFotoId: number): void {
+    this.vFotoService.delFoto(pFotoId).subscribe({
+      next: () => alert('Foto ' +pFotoId+ ' excluída com sucesso!')
+    })
   }
 }
